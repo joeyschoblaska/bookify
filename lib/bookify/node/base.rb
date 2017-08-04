@@ -1,0 +1,37 @@
+module Bookify::Node
+  class Base
+    attr_accessor :node, :pdf
+
+    FONTS = {
+      h1:      ["Book Antiqua", size: 16, style: :bold],
+      h2:      ["Book Antiqua", size: 11, style: :bold],
+      primary: ["Book Antiqua", size: 9],
+      th:      ["Book Antiqua", size: 9, style: :bold]
+    }
+
+    def self.render(node, pdf)
+      new(node, pdf).render
+    end
+
+    def method_missing(method, *args, &block)
+      pdf.send(method, *args, &block)
+    end
+
+    def initialize(node, pdf)
+      self.node = node
+      self.pdf = pdf
+    end
+
+    def html_classes(element = node)
+      (element.attr(:class) || "").split(" ")
+    end
+
+    def font(name)
+      pdf.font *FONTS[name]
+    end
+
+    def clean_html(html)
+      html.gsub(/\n/, "").gsub(/\s+/, " ")
+    end
+  end
+end
