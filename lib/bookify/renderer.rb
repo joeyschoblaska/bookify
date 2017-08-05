@@ -1,4 +1,6 @@
 class Bookify::Renderer
+  MARKDOWN_CONVERTER = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+
   attr_accessor :filename
 
   def initialize(filename)
@@ -26,11 +28,19 @@ class Bookify::Renderer
 
   private
 
+  def markdown
+    @markdown ||= File.read(filename)
+  end
+
   def doc
-    @doc ||= Nokogiri::HTML(File.read("src/#{filename}"))
+    @doc ||= Nokogiri::HTML(html)
+  end
+
+  def html
+    @html ||= MARKDOWN_CONVERTER.render(markdown)
   end
 
   def pdf_path
-    "doc/#{filename.gsub(/\.\w+/, ".pdf")}"
+    filename.gsub(/\.\w+/, ".pdf")
   end
 end
