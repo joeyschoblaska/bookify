@@ -3,6 +3,7 @@ module Bookify::Node
     blockquote: Blockquote,
     h1: H1,
     h2: H2,
+    hr: Hr,
     img: Image,
     ol: List,
     p: Paragraph,
