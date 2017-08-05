@@ -9,7 +9,7 @@ module Bookify::Node
           move_cursor_to bounds.top
 
           bounding_box [bounds.left + 12, cursor], width: bounds.width - 12 do
-            text li.inner_html.strip
+            text li.inner_html.strip, inline_format: true
           end
         end
 
