@@ -3,7 +3,7 @@ module Bookify::Node
     def render
       font :h1
       text node.inner_html.strip, align: :center
-      move_down 2
+      move_down 10
     end
   end
 end
