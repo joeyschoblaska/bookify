@@ -4,8 +4,8 @@ module Bookify::Node
 
     FONTS = {
       h1:      ["Book Antiqua", size: 16, style: :bold],
-      h2:      ["Book Antiqua", size: 11, style: :bold],
-      primary: ["Book Antiqua", size: 9]
+      h2:      ["Book Antiqua", size: 12, style: :bold],
+      primary: ["Book Antiqua", size: 10]
     }
 
     def self.render(node, pdf)
