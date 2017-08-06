@@ -1,3 +1,10 @@
+require "rubygems"
+
+require "nokogiri"
+require "prawn"
+require "prawn/table"
+require "redcarpet"
+
 module Bookify
 end
 

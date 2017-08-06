@@ -1,12 +1,5 @@
 #!/usr/bin/env ruby
 
-require "rubygems"
-
-require "nokogiri"
-require "prawn"
-require "prawn/table"
-require "redcarpet"
-
 require "./lib/bookify"
 
 Bookify::Renderer.new(ARGV[0]).render
