@@ -4,7 +4,7 @@ module Bookify::Node
       font :h3
       move_down 5
       text node.inner_html.strip
-      move_down 0.5
+      move_down 5
     end
   end
 end
