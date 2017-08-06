@@ -12,4 +12,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "prawn", "~> 2.2"
   s.add_runtime_dependency "prawn-table", "~> 0.2"
   s.add_runtime_dependency "redcarpet", "~> 3.3"
+
+  s.executables << "bookify"
 end
