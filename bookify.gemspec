@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.date        = "2017-08-05"
   s.summary     = "Transform Markdown docs into two-column PDFs."
   s.author      = "Joey Schoblaska"
-  s.files       = ["lib/bookify.rb"]
+  s.files       = `git ls-files lib fonts`.split("\n")
   s.homepage    = "https://github.com/joeyschoblaska/bookify"
   s.license     = "MIT"
 
