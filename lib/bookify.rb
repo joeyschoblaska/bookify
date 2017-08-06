@@ -8,7 +8,7 @@ require "redcarpet"
 module Bookify
 end
 
-Dir["./lib/bookify/node/*.rb"].each { |f| require f }
+Dir["#{File.dirname(__FILE__)}/bookify/node/*.rb"].each { |f| require f }
 
-require "./lib/bookify/node"
-require "./lib/bookify/renderer"
+require_relative "bookify/node"
+require_relative "bookify/renderer"

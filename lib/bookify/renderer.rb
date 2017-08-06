@@ -9,11 +9,13 @@ class Bookify::Renderer
 
   def render
     Prawn::Document.generate(pdf_path) do |pdf|
+      font_path = "#{File.dirname(__FILE__)}/../../fonts"
+
       pdf.font_families["Book Antiqua"] = {
-        normal:      { file: "fonts/BookAntiqua.ttf" },
-        bold:        { file: "fonts/BookAntiqua-Bold.ttf" },
-        italic:      { file: "fonts/BookAntiqua-Italic.ttf" },
-        bold_italic: { file: "fonts/BookAntiqua-BoldItalic.ttf" }
+        normal:      { file: "#{font_path}/BookAntiqua.ttf" },
+        bold:        { file: "#{font_path}/BookAntiqua-Bold.ttf" },
+        italic:      { file: "#{font_path}/BookAntiqua-Italic.ttf" },
+        bold_italic: { file: "#{font_path}/BookAntiqua-BoldItalic.ttf" }
       }
 
       pdf.fill_color "000000"
