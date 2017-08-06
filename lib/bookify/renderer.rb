@@ -1,14 +1,15 @@
 class Bookify::Renderer
   MARKDOWN_CONVERTER = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
 
-  attr_accessor :filename
+  attr_accessor :input_file, :output_file
 
-  def initialize(filename)
-    self.filename = filename
+  def initialize(input_file, output_file = nil)
+    self.input_file = input_file
+    self.output_file = output_file || input_file.gsub(/\.\w+/, ".pdf")
   end
 
   def render
-    Prawn::Document.generate(pdf_path) do |pdf|
+    Prawn::Document.generate(output_file) do |pdf|
       font_path = "#{File.dirname(__FILE__)}/../../fonts"
 
       pdf.font_families["Book Antiqua"] = {
@@ -32,7 +33,7 @@ class Bookify::Renderer
   private
 
   def markdown
-    @markdown ||= File.read(filename)
+    @markdown ||= File.read(input_file)
   end
 
   def doc
@@ -41,9 +42,5 @@ class Bookify::Renderer
 
   def html
     @html ||= MARKDOWN_CONVERTER.render(markdown)
-  end
-
-  def pdf_path
-    filename.gsub(/\.\w+/, ".pdf")
   end
 end
