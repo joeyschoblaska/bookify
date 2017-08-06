@@ -4,6 +4,11 @@
 
 A gem for converting Markdown documents to book style, two-column PDFs.
 
+## Example
+
+[This Markdown doc](https://raw.githubusercontent.com/joeyschoblaska/bookify/master/example/document.md), run through bookify, gets converted
+into [this PDF](https://raw.githubusercontent.com/joeyschoblaska/bookify/master/example/output.pdf).
+
 ## Usage
 
 ### On the command line
