@@ -19,6 +19,7 @@ class Bookify::Renderer
       pdf.fill_color "000000"
       pdf.stroke_color "333333"
       pdf.line_width(0.5)
+      pdf.default_leading 0.5
 
       pdf.column_box [0, pdf.cursor], columns: 2, width: pdf.bounds.width do
         doc.children.each { |c| Bookify::Node.render(c, pdf) }
