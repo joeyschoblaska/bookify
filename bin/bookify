@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require "./lib/bookify"
+require "bookify"
 
 Bookify::Renderer.new(ARGV[0]).render
