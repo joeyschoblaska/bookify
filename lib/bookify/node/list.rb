@@ -3,18 +3,19 @@ module Bookify::Node
     def render
       font :primary
 
-      node.css("li").each_with_index do |li, i|
-        bounding_box [bounds.left, cursor], width: bounds.width do
-          text bullet(i)
-          move_cursor_to bounds.top
+      move_up 5
 
-          bounding_box [bounds.left + 12, cursor], width: bounds.width - 12 do
-            text li.inner_html.strip, inline_format: true
-          end
-        end
-
-        move_down 10
+      data = node.css("li").each_with_index.map do |li, i|
+        [bullet(i), li.inner_html.strip]
       end
+
+      table(data) do
+        cells.inline_format = true
+        cells.borders = []
+        cells.padding = 5
+      end
+
+      move_down 5
     end
 
     def bullet(index)

@@ -20,7 +20,7 @@ class Bookify::Renderer
       pdf.stroke_color "333333"
       pdf.line_width(0.5)
 
-      pdf.reflow_column_box [0, pdf.cursor], columns: 2, width: pdf.bounds.width do
+      pdf.column_box [0, pdf.cursor], columns: 2, width: pdf.bounds.width do
         doc.children.each { |c| Bookify::Node.render(c, pdf) }
       end
     end
