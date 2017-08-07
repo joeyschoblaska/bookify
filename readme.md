@@ -2,7 +2,9 @@
   <img width="319" src="https://raw.githubusercontent.com/joeyschoblaska/bookify/master/img/bookify.png">
 </p>
 
-A gem for converting Markdown documents to book style, two-column PDFs.
+<p align="center">
+  A gem for converting Markdown documents to book style, two-column PDFs.
+</p>
 
 ## Example
 
