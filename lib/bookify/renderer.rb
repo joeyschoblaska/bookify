@@ -9,7 +9,7 @@ class Bookify::Renderer
   end
 
   def render
-    Prawn::Document.generate(output_file) do |pdf|
+    Prawn::Document.generate(output_file, margin: 50) do |pdf|
       font_path = "#{File.dirname(__FILE__)}/../../fonts"
 
       pdf.font_families["Book Antiqua"] = {
