@@ -32,3 +32,4 @@ Bookify::Renderer.new("document.md", "output.pdf").render
 
 ## TODO
 * finish converting support for images
+* nexted lists
