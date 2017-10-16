@@ -9,6 +9,8 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files lib fonts`.split("\n")
   s.executables << "bookify"
 
+  s.add_development_dependency "rake"
+
   s.add_runtime_dependency "nokogiri", "~> 1.8"
   s.add_runtime_dependency "prawn", "~> 2.2"
   s.add_runtime_dependency "prawn-table", "~> 0.2"
