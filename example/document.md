@@ -8,6 +8,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia elei
 
 Pellentesque tempus rhoncus orci, vel placerat arcu fermentum non. In hac habitasse platea dictumst. Quisque egestas, ligula non ullamcorper feugiat, ex eros fermentum elit, eget rhoncus massa quam eu nulla. In consectetur vehicula tortor at dignissim. Sed risus urna, eleifend non magna dapibus, mattis placerat mi. Pellentesque tortor lacus, lobortis et ex id, imperdiet blandit justo. Sed pretium rhoncus massa, id pellentesque urna tincidunt non. Etiam et ipsum ut nibh blandit convallis. Donec gravida feugiat erat, ut efficitur dui fermentum vel.
 
+<img src="img/bookify.png">
+
 ### And a tertiary one
 
 Maecenas tincidunt congue enim. Praesent ante libero, gravida eu consectetur vitae, bibendum ut nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque malesuada dolor turpis, pellentesque sagittis turpis posuere nec. Donec bibendum lacus vel ipsum ullamcorper pharetra. Nulla id luctus est. Donec ut luctus velit. Nulla a ligula non justo fermentum vulputate lacinia ac arcu. Praesent tortor nibh, pulvinar vel sapien eget, sodales pretium risus. Nulla vehicula arcu quis ante suscipit, vel consequat enim dapibus. Donec vel tempor velit.

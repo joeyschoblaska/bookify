@@ -3,15 +3,11 @@ module Bookify::Node
     def render
       options = {
         position: html_classes.include?("center") ? :center : :left,
-        height: node.attr(:height).to_f
+        fit: [bounds.width, bounds.height]
       }
 
-      image path, options
+      image node.attr(:src), options
       move_down 15
-    end
-
-    def path
-      "src/#{node.attr(:src)}"
     end
   end
 end
