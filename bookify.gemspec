@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "bookify"
-  s.version     = "0.0.7"
+  s.version     = "0.0.8"
   s.summary     = "Transform Markdown docs into two-column PDFs."
   s.author      = "Joey Schoblaska"
   s.homepage    = "https://github.com/joeyschoblaska/bookify"
