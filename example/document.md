@@ -10,6 +10,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia elei
 
 <img src="img/bookify.png">
 
+<div class="page-break"></div>
+
 ### And a tertiary one
 
 Maecenas tincidunt congue enim. Praesent ante libero, gravida eu consectetur vitae, bibendum ut nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque malesuada dolor turpis, pellentesque sagittis turpis posuere nec. Donec bibendum lacus vel ipsum ullamcorper pharetra. Nulla id luctus est. Donec ut luctus velit. Nulla a ligula non justo fermentum vulputate lacinia ac arcu. Praesent tortor nibh, pulvinar vel sapien eget, sodales pretium risus. Nulla vehicula arcu quis ante suscipit, vel consequat enim dapibus. Donec vel tempor velit.
