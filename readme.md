@@ -30,6 +30,11 @@ require "bookify"
 Bookify::Renderer.new("document.md", "output.pdf").render
 ```
 
+## Syntax
+
+Supports basic Markdown (paragraphs, ul, ol, bold, italics, h1, h2, h3) and limited html (img). You can also add divs with a class of "section-break" to immediately move to the next column, or "page-break" to immediately move to the next full page.
+
 ## TODO
+
 * nested lists
 * tables

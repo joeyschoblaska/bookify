@@ -10,7 +10,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia elei
 
 <img src="img/bookify.png">
 
-<div class="page-break"></div>
+<div class="section-break"></div>
 
 ### And a tertiary one
 
