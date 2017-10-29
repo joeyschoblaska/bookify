@@ -4,6 +4,7 @@ require "nokogiri"
 require "prawn"
 require "prawn/table"
 require "redcarpet"
+require "htmlentities"
 
 module Bookify
 end

@@ -3,7 +3,7 @@ module Bookify::Node
     def render
       move_down 5
       font :h4
-      text node.inner_html.strip
+      text decode_html(node.inner_html.strip)
       move_down 5
     end
   end

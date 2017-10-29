@@ -34,5 +34,9 @@ module Bookify::Node
     def clean_html(html)
       html.gsub(/\n/, "").gsub(/\s+/, " ")
     end
+
+    def decode_html(html)
+      HTMLEntities.new.decode(html)
+    end
   end
 end
