@@ -4,7 +4,7 @@ module Bookify::Node
       font :h3
       move_down 5
       text decode_html(node.inner_html.strip)
-      move_down 5
+      move_down 2
     end
   end
 end
