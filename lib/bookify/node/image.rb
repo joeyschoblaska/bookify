@@ -3,7 +3,7 @@ module Bookify::Node
     def render
       options = {
         position: html_classes.include?("center") ? :center : :left,
-        fit: [bounds.width, bounds.height]
+        fit: [bounds.width, -1]
       }
 
       image node.attr(:src), options
