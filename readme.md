@@ -20,8 +20,9 @@ gem install bookify
 bookify document.md
 ```
 
-You can specify the output file with a second argument (`bookify document.md output.pdf`),
-otherwise it will default to a PDF with the same name and directory as your input file.
+You can specify the output file with a second argument (`bookify document.md
+output.pdf`), otherwise it will default to a PDF in your current directory with
+the same name as the input file.
 
 Passing `-l` or `--landscape` as the first argument will render the document in
 a three-column landscape layout.

@@ -14,7 +14,7 @@ class Bookify::Renderer
     end
 
     self.input_file = args[0]
-    self.output_file = args[1] || input_file.gsub(/\.\w+/, ".pdf")
+    self.output_file = args[1] || input_file.split("/").last.gsub(/\.\w+/, ".pdf")
   end
 
   def render
