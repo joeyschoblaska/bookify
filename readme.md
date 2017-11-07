@@ -23,6 +23,13 @@ bookify document.md
 You can specify the output file with a second argument (`bookify document.md output.pdf`),
 otherwise it will default to a PDF with the same name and directory as your input file.
 
+Passing `-l` or `--landscape` as the first argument will render the document in
+a three-column landscape layout.
+
+```
+bookify -l document.md
+```
+
 ### In Ruby
 
 ```ruby

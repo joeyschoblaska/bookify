@@ -2,4 +2,4 @@
 
 require "bookify"
 
-Bookify::Renderer.new(ARGV[0], ARGV[1]).render
+Bookify::Renderer.new(ARGV).render

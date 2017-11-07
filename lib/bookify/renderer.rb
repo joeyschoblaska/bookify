@@ -1,15 +1,24 @@
 class Bookify::Renderer
   MARKDOWN_CONVERTER = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
 
-  attr_accessor :input_file, :output_file
+  attr_accessor :input_file, :output_file, :layout, :columns
 
-  def initialize(input_file, output_file = nil)
-    self.input_file = input_file
-    self.output_file = output_file || input_file.gsub(/\.\w+/, ".pdf")
+  def initialize(args)
+    if ["-l", "--landscape"].include?(args[0])
+      args.shift
+      self.layout = :landscape
+      self.columns = 3
+    else
+      self.layout = :portrait
+      self.columns = 2
+    end
+
+    self.input_file = args[0]
+    self.output_file = args[1] || input_file.gsub(/\.\w+/, ".pdf")
   end
 
   def render
-    Prawn::Document.generate(output_file, margin: 50) do |pdf|
+    Prawn::Document.generate(output_file, margin: 50, page_layout: layout) do |pdf|
       font_path = "#{File.dirname(__FILE__)}/../../fonts"
 
       pdf.font_families["Book Antiqua"] = {
@@ -24,7 +33,7 @@ class Bookify::Renderer
       pdf.line_width(0.5)
       pdf.default_leading 0.5
 
-      pdf.column_box [0, pdf.cursor], columns: 2, width: pdf.bounds.width do
+      pdf.column_box [0, pdf.cursor], columns: columns, width: pdf.bounds.width do
         doc.children.each { |c| Bookify::Node.render(c, pdf) }
       end
     end
