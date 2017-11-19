@@ -2,6 +2,7 @@ module Bookify::Node
   class H4 < Base
     def render
       move_down 5
+      break_if_close_to_bottom
       font :h4
       text decode_html(node.inner_html.strip)
       move_down 2

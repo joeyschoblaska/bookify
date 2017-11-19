@@ -46,4 +46,3 @@ Supports basic Markdown (paragraphs, ul, ol, bold, italics, h1, h2, h3) and limi
 
 * nested lists
 * tables
-* automatically section-break headers if they're close to the bottom of the page
