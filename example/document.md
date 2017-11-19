@@ -4,6 +4,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia elei
 
 > Proin et purus vitae diam vulputate tristique at sit amet leo. Proin interdum lobortis nunc, in bibendum odio feugiat at. Aenean vitae enim nulla. Phasellus at ante scelerisque, sodales felis nec, hendrerit nunc. Vivamus sed vestibulum orci. Sed imperdiet, arcu suscipit scelerisque accumsan, sem ligula lobortis neque, vitae euismod sapien ipsum non sem. Aliquam ut eros bibendum, pretium ipsum non, mollis eros. Donec faucibus porttitor mi, sit amet pellentesque erat.
 
+# An H1 Lower on the Page
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia eleifend iaculis. Sed feugiat auctor risus, nec vestibulum urna vehicula sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec mattis congue euismod. Morbi pharetra mi in libero sodales, imperdiet hendrerit lorem condimentum. Nullam facilisis quam nec sagittis aliquet.
+
 ## Here's a secondary header
 
 **Pellentesque tempus** rhoncus orci, vel placerat arcu fermentum non. In hac habitasse platea dictumst. Quisque egestas, ligula non ullamcorper feugiat, ex eros fermentum elit, eget rhoncus massa quam eu nulla. In consectetur vehicula tortor at dignissim. Sed risus urna, eleifend non magna dapibus, mattis placerat mi. Pellentesque tortor lacus, lobortis et ex id, imperdiet blandit justo. Sed pretium rhoncus massa, id pellentesque urna tincidunt non. Etiam et ipsum ut nibh blandit convallis. Donec gravida feugiat erat, ut efficitur dui fermentum vel.
