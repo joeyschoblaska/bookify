@@ -46,3 +46,4 @@ Supports basic Markdown (paragraphs, ul, ol, bold, italics, h1, h2, h3) and limi
 
 * nested lists
 * tables
+* set image width
