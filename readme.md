@@ -49,4 +49,4 @@ Supports basic Markdown (paragraphs, ul, ol, bold, italics, h1, h2, h3) and limi
 * set image width
 * images and headers that span the full page width
 * initial / "drop cap" letters
-* add [outline](http://prawnpdf.org/docs/0.11.1/Prawn/Outline.html) metadata
+* add [outline](http://prawnpdf.org/docs/0.11.1/Prawn/Outline.html) h2 sections
