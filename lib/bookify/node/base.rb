@@ -39,7 +39,7 @@ module Bookify::Node
       HTMLEntities.new.decode(html)
     end
 
-    def break_if_close_to_bottom(tolerance = 100)
+    def break_if_close_to_bottom(tolerance = 125)
       bounds.move_past_bottom if pdf.y <= tolerance
     end
   end
