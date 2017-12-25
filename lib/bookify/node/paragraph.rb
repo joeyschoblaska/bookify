@@ -1,7 +1,7 @@
 module Bookify::Node
   class Paragraph < Base
     def render
-      if node.children.all? { |c| c.name.to_sym == :img || c.inner_html == "" }
+      if node.children.all? { |c| c.name.to_sym == :img || c.text == "\n" }
         node.children.select { |c| c.name.to_sym == :img }.each do |img|
           SUBCLASSES[:img].render(img, pdf)
         end
