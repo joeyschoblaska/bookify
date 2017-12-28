@@ -1,5 +1,5 @@
 class Bookify::Renderer
-  MARKDOWN_CONVERTER = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+  MARKDOWN_CONVERTER = Redcarpet::Markdown.new(Redcarpet::Render::HTML, tables: true)
 
   attr_accessor :input_file, :output_file, :layout, :columns
 

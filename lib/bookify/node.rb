@@ -12,6 +12,7 @@ module Bookify::Node
     img: Image,
     ol: List,
     p: Paragraph,
+    table: Table,
     ul: List
   }
 

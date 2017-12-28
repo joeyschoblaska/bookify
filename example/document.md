@@ -24,7 +24,12 @@ Maecenas tincidunt congue enim. Praesent ante libero, gravida eu consectetur vit
 
 Duis eu egestas neque. Sed ac cursus mi. In suscipit nisl nec libero tristique, ut cursus leo molestie. Morbi sed laoreet ipsum. Ut diam dui, interdum lobortis ultrices eget, volutpat iaculis magna. Cras dolor magna, semper eu sem nec, tincidunt faucibus ipsum. In fringilla turpis non aliquam volutpat. Aenean quis feugiat purus, non pharetra metus. Nullam porttitor convallis cursus. Praesent nec faucibus nisi.
 
-Duis at mi id neque condimentum consequat non in ligula. Phasellus malesuada rutrum ultrices. Fusce quis pharetra neque, eu dapibus nisl. Sed lacus lorem, malesuada sit amet venenatis iaculis, laoreet eu odio. Sed magna urna, ornare interdum aliquet in, gravida a mauris. Quisque rhoncus condimentum massa, non posuere enim consequat ut. Praesent vel nibh tincidunt, rhoncus magna at, consequat diam. Ut volutpat dictum nibh a scelerisque. Mauris aliquam, eros sit amet vehicula faucibus, diam nunc porttitor libero, quis elementum turpis nulla eget nibh. Morbi laoreet eros nec mi mollis, nec lacinia magna sodales. Cras hendrerit diam non tempus efficitur. Aliquam eget iaculis ex. Praesent dignissim lectus ligula, vitae efficitur nisi convallis vitae. Morbi malesuada non ligula rhoncus cursus. Sed vehicula metus nulla, nec euismod augue ultrices eget.
+|       | Column A | Column B | Column C |
+| ----- | -------- | -------- | -------- |
+| Row 1 | Data 1A  | Data 1B  | Data 1C  |
+| Row 2 | Data 2A  | Data 2B  | Data 2C  |
+
+Praesent vel nibh tincidunt, rhoncus magna at, consequat diam. Ut volutpat dictum nibh a scelerisque. Mauris aliquam, eros sit amet vehicula faucibus, diam nunc porttitor libero, quis elementum turpis nulla eget nibh. Morbi laoreet eros nec mi mollis, nec lacinia magna sodales. Cras hendrerit diam non tempus efficitur. Aliquam eget iaculis ex. Praesent dignissim lectus ligula, vitae efficitur nisi convallis vitae. Morbi malesuada non ligula rhoncus cursus. Sed vehicula metus nulla, nec euismod augue ultrices eget.
 
 ## And lists too
 
