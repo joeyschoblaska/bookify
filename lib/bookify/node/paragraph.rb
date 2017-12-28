@@ -6,7 +6,7 @@ module Bookify::Node
           SUBCLASSES[:img].render(img, pdf)
         end
       else
-        html = clean_html(node.inner_html)
+        html = clean_html(node.inner_html.gsub("\n", " "))
         font :primary
         text html, inline_format: true
         move_down 10
