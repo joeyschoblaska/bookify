@@ -5,12 +5,12 @@ module Bookify::Node
         cells.borders = []
 
         row(0).borders = [:top, :bottom]
-        row(0).border_top_width = 1
+        row(0).border_top_width = 0.5
         row(0).border_bottom_width = 0.5
         row(0).font_style = :bold
 
         row(-1).borders = [:bottom]
-        row(-1).border_bottom_width = 1
+        row(-1).border_bottom_width = 0.5
 
         cells.columns(0).padding = [5, 5, 5, 0]
         cells.columns(-1).padding = [5, 0, 5, 5]
