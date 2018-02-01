@@ -1,6 +1,8 @@
 module Bookify::Node
   class Table < Base
     def render
+      font :primary
+
       table table_data, header: true, width: bounds.width do
         cells.borders = []
 
