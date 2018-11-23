@@ -44,6 +44,7 @@ Supports basic Markdown (paragraphs, ul, ol, bold, italics, h1, h2, h3, tables) 
 
 ## TODO
 
+* support strikethrough
 * nested lists
 * tables with text centered within cells
 * set image width
