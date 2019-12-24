@@ -1,12 +1,12 @@
 Gem::Specification.new do |s|
-  s.name        = "bookify"
-  s.version     = "1.5.0"
-  s.summary     = "Transform Markdown docs into two-column PDFs."
-  s.author      = "Joey Schoblaska"
-  s.homepage    = "https://github.com/joeyschoblaska/bookify"
-  s.license     = "MIT"
+  s.name = "bookify"
+  s.version = "1.6.0"
+  s.summary = "Transform Markdown docs into two-column PDFs."
+  s.author = "Joey Schoblaska"
+  s.homepage = "https://github.com/joeyschoblaska/bookify"
+  s.license = "MIT"
 
-  s.files       = `git ls-files lib fonts`.split("\n")
+  s.files = `git ls-files lib fonts`.split("\n")
   s.executables << "bookify"
 
   s.add_development_dependency "rake"
