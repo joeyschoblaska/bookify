@@ -35,7 +35,7 @@ bookify -l document.md
 
 ```ruby
 require "bookify"
-Bookify::Renderer.new("document.md", "output.pdf").render
+Bookify::Renderer.new(input_file: "document.md", output_file: "output.pdf").render
 ```
 
 ## Syntax

@@ -1,20 +1,30 @@
 class Bookify::Renderer
   MARKDOWN_CONVERTER = Redcarpet::Markdown.new(Redcarpet::Render::HTML, tables: true)
 
-  attr_accessor :input_file, :output_file, :layout, :columns
+  attr_accessor :input_file, :output_file, :layout, :columns, :input_text
 
-  def initialize(args)
+  def self.from_args(args)
     if ["-l", "--landscape"].include?(args[0])
       args.shift
-      self.layout = :landscape
-      self.columns = 3
+      layout = :landscape
+      columns = 3
     else
-      self.layout = :portrait
-      self.columns = 2
+      layout = :portrait
+      columns = 2
     end
 
-    self.input_file = args[0]
-    self.output_file = args[1] || input_file.split("/").last.gsub(/\.\w+/, ".pdf")
+    input_file = args[0]
+    output_file = args[1] || input_file.split("/").last.gsub(/\.\w+/, ".pdf")
+
+    new(layout: layout, columns: columns, input_file: input_file, output_file: output_file)
+  end
+
+  def initialize(layout: :landscape, columns: 2, output_file:, input_file: nil, input_text: nil)
+    @layout = layout
+    @columns = columns
+    @output_file = output_file
+    @input_file = input_file
+    @input_text = input_text
   end
 
   def render
@@ -22,10 +32,10 @@ class Bookify::Renderer
       font_path = "#{File.dirname(__FILE__)}/../../fonts"
 
       pdf.font_families["Book Antiqua"] = {
-        normal:      { file: "#{font_path}/BookAntiqua.ttf" },
-        bold:        { file: "#{font_path}/BookAntiqua-Bold.ttf" },
-        italic:      { file: "#{font_path}/BookAntiqua-Italic.ttf" },
-        bold_italic: { file: "#{font_path}/BookAntiqua-BoldItalic.ttf" }
+        normal: {file: "#{font_path}/BookAntiqua.ttf"},
+        bold: {file: "#{font_path}/BookAntiqua-Bold.ttf"},
+        italic: {file: "#{font_path}/BookAntiqua-Italic.ttf"},
+        bold_italic: {file: "#{font_path}/BookAntiqua-BoldItalic.ttf"},
       }
 
       pdf.fill_color "000000"
@@ -42,7 +52,7 @@ class Bookify::Renderer
   private
 
   def markdown
-    @markdown ||= File.read(input_file)
+    @markdown ||= (input_text || File.read(input_file))
   end
 
   def doc
