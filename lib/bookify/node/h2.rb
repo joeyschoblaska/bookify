@@ -7,7 +7,7 @@ module Bookify::Node
       text decode_html(node.inner_html.strip)
       move_down 1
       stroke { horizontal_rule }
-      move_down 5
+      move_down 10
     end
   end
 end

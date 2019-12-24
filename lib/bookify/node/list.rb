@@ -7,9 +7,9 @@ module Bookify::Node
 
       move_up PADDING
 
-      data = node.css("li").each_with_index.map do |li, i|
+      data = node.css("li").each_with_index.map { |li, i|
         [bullet(i), li.inner_html.strip]
-      end
+      }
 
       table(data) do
         cells.inline_format = true
@@ -17,7 +17,7 @@ module Bookify::Node
         cells.padding = PADDING
       end
 
-      move_down (10 - PADDING)
+      move_down 10
     end
 
     def bullet(index)

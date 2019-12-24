@@ -37,13 +37,13 @@ Praesent vel nibh tincidunt, rhoncus magna at, consequat diam. Ut volutpat dictu
 
 ## And lists too
 
-### Unordered
+Unordered:
 
 * Mauris aliquam
 * Cras hendrerit diam
 * Morbi malesuada non ligula
 
-### And ordered
+And ordered:
 
 1. Praesent dignissim lectus
 2. Cras dolor magna
