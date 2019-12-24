@@ -1,7 +1,7 @@
 class Bookify::Renderer
   MARKDOWN_CONVERTER = Redcarpet::Markdown.new(Redcarpet::Render::HTML, tables: true)
 
-  attr_accessor :input_file, :output_file, :layout, :columns, :input_text, :column_spacer
+  attr_accessor :input_file, :output_file, :layout, :columns, :input_text, :column_spacer, :margin
 
   def self.from_args(args)
     if ["-l", "--landscape"].include?(args[0])
@@ -19,17 +19,18 @@ class Bookify::Renderer
     new(layout: layout, columns: columns, input_file: input_file, output_file: output_file)
   end
 
-  def initialize(layout: :landscape, columns: 2, output_file:, input_file: nil, input_text: nil, column_spacer: nil)
+  def initialize(layout: :landscape, columns: 2, output_file:, input_file: nil, input_text: nil, column_spacer: nil, margin: 50)
     @layout = layout
     @columns = columns
     @output_file = output_file
     @input_file = input_file
     @input_text = input_text
     @column_spacer = column_spacer
+    @margin = margin
   end
 
   def render
-    Prawn::Document.generate(output_file, margin: 50, page_layout: layout) do |pdf|
+    Prawn::Document.generate(output_file, margin: margin, page_layout: layout) do |pdf|
       font_path = "#{File.dirname(__FILE__)}/../../fonts"
 
       pdf.font_families["Book Antiqua"] = {
@@ -44,7 +45,7 @@ class Bookify::Renderer
       pdf.line_width(0.5)
       pdf.default_leading 0.5
 
-      pdf.column_box [0, pdf.cursor], columns: columns, width: pdf.bounds.width, spacer: column_spacer || pdf.font_size do
+      pdf.column_box [0, pdf.cursor], columns: columns, width: pdf.bounds.width, spacer: (column_spacer || pdf.font_size) do
         doc.children.each { |c| Bookify::Node.render(c, pdf) }
       end
     end
