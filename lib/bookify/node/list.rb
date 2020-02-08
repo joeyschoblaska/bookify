@@ -1,3 +1,5 @@
+require_relative "base"
+
 module Bookify::Node
   class List < Base
     PADDING = 3

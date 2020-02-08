@@ -1,9 +1,11 @@
+require_relative "base"
+
 module Bookify::Node
   class Image < Base
     def render
       options = {
         position: html_classes.include?("center") ? :center : :left,
-        fit: [bounds.width, -1]
+        fit: [bounds.width, -1],
       }
 
       image node.attr(:src), options

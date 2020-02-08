@@ -1,3 +1,5 @@
+require_relative "base"
+
 module Bookify::Node
   class H4 < Base
     def render

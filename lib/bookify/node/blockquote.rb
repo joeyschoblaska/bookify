@@ -1,3 +1,5 @@
+require_relative "base"
+
 module Bookify::Node
   class Blockquote < Base
     def render
