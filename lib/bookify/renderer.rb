@@ -1,7 +1,7 @@
 class Bookify::Renderer
   MARKDOWN_CONVERTER = Redcarpet::Markdown.new(Redcarpet::Render::HTML, tables: true)
 
-  attr_accessor :input_file, :output_file, :layout, :columns, :input_text, :column_spacer, :margin
+  attr_accessor :input_file, :output_file, :layout, :columns, :input_text, :column_spacer, :margin, :page_size
 
   def self.from_args(args)
     if ["-l", "--landscape"].include?(args[0])
@@ -19,7 +19,7 @@ class Bookify::Renderer
     new(layout: layout, columns: columns, input_file: input_file, output_file: output_file)
   end
 
-  def initialize(layout: :landscape, columns: 2, output_file:, input_file: nil, input_text: nil, column_spacer: nil, margin: 50)
+  def initialize(layout: :portrait, columns: 2, output_file:, input_file: nil, input_text: nil, column_spacer: nil, margin: 50, page_size: nil)
     @layout = layout
     @columns = columns
     @output_file = output_file
@@ -27,10 +27,13 @@ class Bookify::Renderer
     @input_text = input_text
     @column_spacer = column_spacer
     @margin = margin
+    @page_size = page_size
   end
 
   def render
-    Prawn::Document.generate(output_file, margin: margin, page_layout: layout) do |pdf|
+    doc_opts = {margin: margin, page_layout: layout, page_size: page_size}.compact
+
+    Prawn::Document.generate(output_file, doc_opts) do |pdf|
       font_path = "#{File.dirname(__FILE__)}/../../fonts"
 
       pdf.font_families["Book Antiqua"] = {
