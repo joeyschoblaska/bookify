@@ -1,5 +1,7 @@
 # This Is My Document
 
+This is an <a href="http://zombo.com">inline link</a>.
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia eleifend iaculis. Sed feugiat auctor risus, nec vestibulum urna vehicula sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec mattis congue euismod. Morbi pharetra mi in libero sodales, imperdiet hendrerit lorem condimentum. Nullam facilisis quam nec sagittis aliquet.
 
 > Proin et purus vitae diam vulputate tristique at sit amet leo. Proin interdum lobortis nunc, in bibendum odio feugiat at. Aenean vitae enim nulla. Phasellus at ante scelerisque, sodales felis nec, hendrerit nunc. Vivamus sed vestibulum orci. Sed imperdiet, arcu suscipit scelerisque accumsan, sem ligula lobortis neque, vitae euismod sapien ipsum non sem. Aliquam ut eros bibendum, pretium ipsum non, mollis eros. Donec faucibus porttitor mi, sit amet pellentesque erat.
