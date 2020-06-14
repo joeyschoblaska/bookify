@@ -12,4 +12,5 @@ end
 Dir["#{File.dirname(__FILE__)}/bookify/node/*.rb"].each { |f| require f }
 
 require_relative "bookify/node"
+require_relative "bookify/sections"
 require_relative "bookify/renderer"

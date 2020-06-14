@@ -32,6 +32,7 @@ class Bookify::Renderer
 
   def render
     doc_opts = {margin: margin, page_layout: layout, page_size: page_size}.compact
+    Bookify::Sections.reset
 
     Prawn::Document.generate(output_file, doc_opts) do |pdf|
       font_path = "#{File.dirname(__FILE__)}/../../fonts"
@@ -40,7 +41,7 @@ class Bookify::Renderer
         normal: {file: "#{font_path}/BookAntiqua.ttf"},
         bold: {file: "#{font_path}/BookAntiqua-Bold.ttf"},
         italic: {file: "#{font_path}/BookAntiqua-Italic.ttf"},
-        bold_italic: {file: "#{font_path}/BookAntiqua-BoldItalic.ttf"},
+        bold_italic: {file: "#{font_path}/BookAntiqua-BoldItalic.ttf"}
       }
 
       pdf.fill_color "000000"
@@ -50,6 +51,14 @@ class Bookify::Renderer
 
       pdf.column_box [0, pdf.cursor], columns: columns, width: pdf.bounds.width, spacer: (column_spacer || pdf.font_size) do
         doc.children.each { |c| Bookify::Node.render(c, pdf) }
+      end
+
+      Bookify::Sections.all.each do |section|
+        pdf.outline.section(section[:title], destination: section[:dest]) do
+          section[:subsections].each do |subsection|
+            pdf.outline.page title: subsection[:title], destination: subsection[:dest]
+          end
+        end
       end
     end
   end

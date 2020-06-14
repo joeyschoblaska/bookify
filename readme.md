@@ -43,7 +43,6 @@ Bookify::Renderer.new(input_file: "document.md", output_file: "output.pdf").rend
 Supports basic Markdown (paragraphs, ul, ol, bold, italics, h1, h2, h3, tables) and limited html (img). You can also add divs with a class of "section-break" to immediately move to the next column, or "page-break" to immediately move to the next full page.
 
 ## TODO
-* add [outline](http://prawnpdf.org/docs/0.11.1/Prawn/Outline.html) h2 sections
 * support strikethrough
 * nested lists
 * tables with text centered within cells
