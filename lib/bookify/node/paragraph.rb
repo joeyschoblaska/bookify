@@ -13,9 +13,12 @@ module Bookify::Node
           align: html_classes.include?("center") ? :center : :left
         }
 
-        html = clean_html(node.inner_html.gsub("\n", " "))
-        font :primary
-        text html, options
+        html = clean_html(node.inner_html.tr("\n", " "))
+
+        font :primary do
+          text html, options
+        end
+
         move_down 10
       end
     end

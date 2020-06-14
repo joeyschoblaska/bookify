@@ -1,6 +1,4 @@
 class Bookify::Renderer
-  MARKDOWN_CONVERTER = Redcarpet::Markdown.new(Redcarpet::Render::HTML, tables: true)
-
   attr_accessor :input_file, :output_file, :layout, :columns, :input_text, :column_spacer, :margin, :page_size
 
   def self.from_args(args)
@@ -74,6 +72,10 @@ class Bookify::Renderer
   end
 
   def html
-    @html ||= MARKDOWN_CONVERTER.render(markdown)
+    @html ||= markdown_converter.render(markdown)
+  end
+
+  def markdown_converter
+    Redcarpet::Markdown.new(Bookify::Markdown, tables: true)
   end
 end

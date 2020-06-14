@@ -3,10 +3,10 @@ module Bookify::Node
     attr_accessor :node, :pdf
 
     FONTS = {
-      h1:      ["Book Antiqua", size: 16, style: :bold],
-      h2:      ["Book Antiqua", size: 12, style: :bold],
-      h3:      ["Book Antiqua", size: 11, style: :bold],
-      h4:      ["Book Antiqua", size: 10, style: :bold],
+      h1: ["Book Antiqua", size: 16, style: :bold],
+      h2: ["Book Antiqua", size: 12, style: :bold],
+      h3: ["Book Antiqua", size: 11, style: :bold],
+      h4: ["Book Antiqua", size: 10, style: :bold],
       primary: ["Book Antiqua", size: 10]
     }
 
@@ -27,12 +27,12 @@ module Bookify::Node
       (element.attr(:class) || "").split(" ")
     end
 
-    def font(name)
-      pdf.font *FONTS[name]
+    def font(name, &block)
+      pdf.font(*FONTS[name], &block)
     end
 
     def clean_html(html)
-      html.gsub(/\n/, "").gsub(/\s+/, " ")
+      html.delete("\n").gsub(/\s+/, " ")
     end
 
     def decode_html(html)

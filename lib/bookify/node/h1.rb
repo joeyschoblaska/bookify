@@ -12,8 +12,9 @@ module Bookify::Node
       Bookify::Sections.add(:h1, html, dest)
       add_dest(html, dest)
 
-      font :h1
-      text html, align: :center
+      font :h1 do
+        text html, align: :center
+      end
 
       move_down 10
     end
