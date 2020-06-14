@@ -5,10 +5,16 @@ module Bookify::Node
     def render
       break_if_close_to_bottom(250)
       move_down 20 unless pdf.y == page_top
-      font :h1
+
       html = decode_html(node.inner_html.strip)
-      Bookify::Sections.add(:h1, html, dest_xyz(0, pdf.y, nil, pdf.page))
+      dest = dest_xyz(0, pdf.y, nil, pdf.page)
+
+      Bookify::Sections.add(:h1, html, dest)
+      add_dest(html, dest)
+
+      font :h1
       text html, align: :center
+
       move_down 10
     end
 

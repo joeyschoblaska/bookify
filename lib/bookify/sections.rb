@@ -20,6 +20,10 @@ module Bookify
       @@sections
     end
 
+    def self.current_h1_title
+      @@sections.any? ? @@sections.last[:title] : nil
+    end
+
     def self.reset
       @@sections = []
     end
