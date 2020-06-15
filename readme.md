@@ -55,7 +55,7 @@ Bookify::Markdown.add_preprocessor ->(string) do
     title, target = content.split("|")
     target ||= title
 
-    "<link anchor='target'>#{title}</link>"
+    "<link anchor='#{target}'>#{title}</link>"
   end
 end
 ```
