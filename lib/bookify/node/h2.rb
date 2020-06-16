@@ -3,7 +3,7 @@ require_relative "base"
 module Bookify::Node
   class H2 < Base
     def render
-      move_down 5
+      move_down 15 unless pdf.y == page_top
       break_if_close_to_bottom
 
       html = decode_html(node.inner_html.strip)
