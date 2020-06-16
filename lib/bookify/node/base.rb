@@ -3,10 +3,10 @@ module Bookify::Node
     attr_accessor :node, :pdf
 
     FONTS = {
-      h1: ["Book Antiqua", size: 16, style: :bold],
+      h1: ["Book Antiqua", size: 18, style: :bold],
       h2: ["Book Antiqua", size: 12, style: :bold],
-      h3: ["Book Antiqua", size: 11, style: :bold],
-      h4: ["Book Antiqua", size: 10, style: :bold],
+      h3: ["Book Antiqua", size: 12, style: :bold],
+      h4: ["Book Antiqua", size: 11, style: :bold],
       primary: ["Book Antiqua", size: 10]
     }
 

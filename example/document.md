@@ -16,7 +16,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia elei
 
 ## Here's a secondary header
 
-**Pellentesque tempus** rhoncus orci, vel placerat arcu fermentum non. In hac habitasse platea dictumst. Quisque egestas, ligula non ullamcorper feugiat, ex eros fermentum elit, eget rhoncus massa quam eu nulla. In consectetur vehicula tortor at dignissim. Sed risus urna, eleifend non magna dapibus, mattis placerat mi. Pellentesque tortor lacus, lobortis et ex id, imperdiet blandit justo. Sed pretium rhoncus massa, id pellentesque urna tincidunt non. Etiam et ipsum ut nibh blandit convallis. Donec gravida feugiat erat, ut efficitur dui fermentum vel.
+**Pellentesque tempus** rhoncus orci, vel placerat arcu fermentum non. In hac habitasse platea dictumst. Quisque egestas, ligula non ullamcorper feugiat, ex eros fermentum elit, eget rhoncus massa quam eu nulla. In consectetur vehicula tortor at dignissim. Sed risus urna, eleifend non magna dapibus, mattis placerat mi. Pellentesque tortor lacus, lobortis et ex id, imperdiet blandit justo.
 
 <img src="img/bookify.png">
 
@@ -28,6 +28,7 @@ Maecenas tincidunt congue enim. Praesent ante libero, gravida eu consectetur vit
 
 ----
 
+#### A quaternary header
 Duis eu egestas neque. Sed ac cursus mi. In suscipit nisl nec libero tristique, ut cursus leo molestie. Morbi sed laoreet ipsum. Ut diam dui, interdum lobortis ultrices eget, volutpat iaculis magna. Cras dolor magna, semper eu sem nec, tincidunt faucibus ipsum. In fringilla turpis non aliquam volutpat. Aenean quis feugiat purus, non pharetra metus. Nullam porttitor convallis cursus. Praesent nec faucibus nisi.
 
 |       | Column A | Column B | Column C |

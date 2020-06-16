@@ -5,9 +5,12 @@ module Bookify::Node
     def render
       move_down 5
       break_if_close_to_bottom
-      font :h4
-      text decode_html(node.inner_html.strip)
-      move_down 2
+
+      font :h4 do
+        text decode_html(node.inner_html.strip)
+      end
+
+      move_down 5
     end
   end
 end

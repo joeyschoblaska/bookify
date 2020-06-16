@@ -4,7 +4,7 @@ module Bookify::Node
   class H1 < Base
     def render
       break_if_close_to_bottom(250)
-      move_down 20 unless pdf.y == page_top
+      move_down 30 unless pdf.y == page_top
 
       html = decode_html(node.inner_html.strip)
       dest = dest_xyz(0, pdf.y, nil, pdf.page)
@@ -16,7 +16,7 @@ module Bookify::Node
         text html, align: :center
       end
 
-      move_down 10
+      move_down 30
     end
 
     def page_top

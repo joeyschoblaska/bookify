@@ -5,19 +5,20 @@ module Bookify::Node
     def render
       font :primary
 
-      table table_data, header: true, width: bounds.width do
+      options = {
+        header: true,
+        width: bounds.width,
+        row_colors: ["FFFFFF", "EEEEEE"]
+      }
+
+      table table_data, options do
         cells.borders = []
 
-        row(0).borders = [:top, :bottom]
-        row(0).border_top_width = 0.5
+        row(0).borders = [:bottom]
         row(0).border_bottom_width = 0.5
         row(0).font_style = :bold
 
-        row(-1).borders = [:bottom]
-        row(-1).border_bottom_width = 0.5
-
-        cells.columns(0).padding = [5, 5, 5, 0]
-        cells.columns(-1).padding = [5, 0, 5, 5]
+        cells.padding = 5
       end
 
       move_down 15

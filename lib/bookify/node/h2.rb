@@ -14,8 +14,9 @@ module Bookify::Node
       add_dest(html, dest)
       add_dest("#{parent_h1}/#{html}", dest) if parent_h1
 
-      font :h2
-      text html
+      font :h2 do
+        text html
+      end
 
       move_down 1
       stroke { horizontal_rule }
