@@ -43,7 +43,7 @@ Bookify::Renderer.new(input_file: "document.md", output_file: "output.pdf").rend
 Supports basic Markdown (paragraphs, ul, ol, bold, italics, h1, h2, h3, tables) and limited html (img). You can also add divs with a class of "section-break" to immediately move to the next column, or "page-break" to immediately move to the next full page.
 
 ### Pre- and Post-processors
-You can add your own Markdown pre- and post-processors. For example, to convert wiki-style internal links (`[[Title]]` and `[[Title|Target]]`) to internal document links:
+When generating documents, bookify converts Markdown to HTML, then parses that HTML into the final PDF document. If you want to add any custom extensions to Markdown (to be applied during the Markdown-to-HTML step), you can do so by registering your own pre- and post-processors. For example, if you want wiki-style internal links (`[[Title]]` and `[[Title|Target]]`) to be parsed as internal PDF links:
 
 ```ruby
 Bookify::Markdown.add_preprocessor ->(string) do
