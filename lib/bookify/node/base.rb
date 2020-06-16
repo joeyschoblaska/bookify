@@ -42,5 +42,9 @@ module Bookify::Node
     def break_if_close_to_bottom(tolerance = 125)
       bounds.move_past_bottom if pdf.y <= tolerance
     end
+
+    def page_top
+      pdf.bounds.parent.height + 50
+    end
   end
 end

@@ -18,9 +18,5 @@ module Bookify::Node
 
       move_down 30
     end
-
-    def page_top
-      pdf.bounds.parent.height + 50
-    end
   end
 end
